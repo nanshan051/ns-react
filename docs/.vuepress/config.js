@@ -1,3 +1,5 @@
+const { nav, sidebar } = require("./utils/navbar.js");
+
 module.exports = {
   title: "NS-React",
   description: "Record a wonderful life",
@@ -12,26 +14,8 @@ module.exports = {
   },
   theme: "reco",
   themeConfig: {
-    nav: [
-      {
-        text: "Home",
-        link: "/",
-      },
-      {
-        text: "常用网站",
-        items: [
-          {
-            text: "GitHub",
-            link: "https://github.com",
-          },
-          {
-            text: "掘金",
-            link: "https://juejin.cn",
-          },
-        ],
-      },
-    ],
+    nav,
+    sidebar,
     subSidebar: "auto",
-    sidebar: [],
   },
 };
