@@ -14,7 +14,7 @@ tags:
 
 - 虚拟 `DOM` 比较“轻”，真实 `DOM` 比较“重”，因为虚拟 `DOM` 是 `React` 内部在用，无需真实 `DOM` 上那么多的属性。
 
-<img :src="$withBase('/images/screenshot/1/3/1.png')" alt="foo">
+<img class="zoomable" :src="$withBase('/images/screenshot/1/3/1.png')" alt="foo">
 
 ## 创建虚拟 DOM 的两种方式
 
@@ -71,8 +71,8 @@ var VDOM = (
 ::: tip
 
 1. **定义虚拟 `DOM` 时，不要加引号。**
-2. **标签中混入`JS` <font color="red"> 表达式 </font> 时要用 `{}` 。**
-3. 样式的 **类名不要用`class`，要用 `className`。**
+2. **标签中混入 `JS` <font color="red"> 表达式 </font> 时要用 `{}` 。**
+3. 样式的 **类名不要用 `class`，要用 `className` 。**
 4. **内联样式，要用 `style = { { key: value } }` 的形式去写。**
    - **<font color="red">外层花括号表明是 `JS` 表达式，内层花括号表明是一个对象。</font>**
 5. **只能有一个根标签。**
@@ -83,7 +83,7 @@ var VDOM = (
 
 :::
 
-### JSX 练习：
+### JSX 练习
 
 ```js{9,10,11,12}
 // 准备数据
@@ -118,7 +118,7 @@ ReactDOM.render(VDOM, document.getElementById("test"));
   - `demo(1)`
   - `arr.map()`
   - `function test() {}`
-- **语句**：**主要起控制作用**，比如，满足什么条件才能执行、什么时候退出循环等。
+- **语句**：**主要起控制作用**，比如，满足什么条件才会执行、什么时候退出循环等。
   - `if(){}`
   - `for(){}`
   - `switch(){case:xxx}`
@@ -127,4 +127,4 @@ ReactDOM.render(VDOM, document.getElementById("test"));
 
 ### 效果
 
-<img :src="$withBase('/images/screenshot/1/3/2.png')" alt="foo">
+<img class="zoomable" :src="$withBase('/images/screenshot/1/3/2.png')" alt="foo">

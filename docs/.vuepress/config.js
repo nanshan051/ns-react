@@ -9,13 +9,21 @@ module.exports = {
       lang: "zh-CN",
     },
   },
-  markdown: {
-    lineNumbers: true,
-  },
   theme: "reco",
   themeConfig: {
     nav,
     sidebar,
     subSidebar: "auto",
+  },
+  markdown: {
+    lineNumbers: true,
+  },
+  plugins: {
+    '@vuepress/medium-zoom': {
+      selector: 'img.zoomable',
+      options: {
+        background: '#333'
+      }
+    }
   },
 };
