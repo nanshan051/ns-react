@@ -6,20 +6,20 @@ tags:
   - babel
 ---
 
-## 相关 js 库
+## 1. 相关 js 库
 
 1. `react.js` : `React` 的核心库
 2. `react-dom.js` : 提供操作 `DOM` 的 `React` 扩展库
 3. `babel.min.js` : 解析 `JSX` 语法代码转为纯 `js` 语法代码的库
 
-## 使用
+## 2. 使用
 
 1. 准备好一个容器
 2. 导入相关 `js` 库
 3. 创建好虚拟 `DOM`
 4. 渲染虚拟 `DOM` 到页面
 
-```html {23,25,27}
+```html {22,23,24,25,26,27,28}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,7 +41,7 @@ tags:
     <!-- 引入babel，用于将jsx转为js -->
     <script type="text/javascript" src="../js/babel.min.js"></script>
 
-    <!-- 此处一定要写babel！表明内部写的不是js，需要通过babel转为js -->
+    <!-- 此处一定要写babel！表明代码需要通过babel转为js -->
     <script type="text/babel">
       // 1.创建虚拟DOM
       const VDOM = <h1>Hello,React</h1>; // 此处一定不要加引号，因为不是字符串

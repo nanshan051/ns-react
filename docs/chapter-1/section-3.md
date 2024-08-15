@@ -6,7 +6,7 @@ tags:
   - 虚拟DOM
 ---
 
-## 虚拟 DOM
+## 1. 虚拟 DOM
 
 - 虚拟 `DOM` 对象最终都会被 `React` 转换为真实的 `DOM`。
 
@@ -16,7 +16,7 @@ tags:
 
 <img class="zoomable" :src="$withBase('/images/screenshot/1/3/1.png')" alt="foo">
 
-## 创建虚拟 DOM 的两种方式
+## 2. 创建虚拟 DOM 的两种方式
 
 1. 纯 `JS`（**一般不用**）:
 
@@ -31,7 +31,7 @@ var VDOM = React.createElement('h1',{id:'test'},'hello);
 var VDOM = <h1 id="test">hello</h1>;
 ```
 
-## 渲染虚拟 DOM
+## 3. 渲染虚拟 DOM
 
 将虚拟 `DOM` 元素渲染到页面中的真实容器 `DOM` 中显示：
 
@@ -42,9 +42,9 @@ ReactDOM.render(virtualDOM, containerDOM);
 - 参数 1：纯 `js` 或 `jsx` 创建的虚拟 `DOM` 对象。
 - 参数 2：用来包含虚拟 `DOM` 元素的真实 `DOM` 元素对象（一般是一个 `div`）。
 
-## JSX
+## 4. JSX
 
-### 定义
+### 4.1 定义
 
 - 全称： `JavaScript XML`。
 - `React` 定义的一种类似于 `XML` 的 `JS` 扩展语法：`XML` + `JS`。
@@ -66,7 +66,7 @@ var VDOM = (
 
 :::
 
-### 基本语法规则
+### 4.2. 基本语法规则
 
 ::: tip
 
@@ -83,7 +83,7 @@ var VDOM = (
 
 :::
 
-### JSX 练习
+### 4.3. JSX 练习
 
 ```js{9,10,11,12}
 // 准备数据
@@ -108,7 +108,7 @@ ReactDOM.render(VDOM, document.getElementById("test"));
 
 上述练习中，通过 `js` 表达式 `data.map()` 返回了一个数组（元素都是虚拟 `DOM`），**`React` 会自动对数组进行遍历**。
 
-### 表达式与语句的区别
+### 4.4. 表达式与语句的区别
 
 ::: tip
 
@@ -125,6 +125,6 @@ ReactDOM.render(VDOM, document.getElementById("test"));
 
 :::
 
-### 效果
+### 4.5. 效果
 
 <img class="zoomable" :src="$withBase('/images/screenshot/1/3/2.png')" alt="foo">

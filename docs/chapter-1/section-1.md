@@ -7,17 +7,17 @@ tags:
   - 特点
 ---
 
-## 官网
+## 1. 官网
 
 - 英文官网：[https://reactjs.org](https://reactjs.org)
 - 中文官网：[https:doc.react-china.org](https:doc.react-china.org)
 
-## 介绍描述
+## 2. 介绍描述
 
 - 用于构建用户界面的 `JavaScript` 库（只关注于 `view` ）
 - 由 `Facebook` 开源
 
-## React 的特点
+## 3. React 的特点
 
 1. `Declarative`（声明式编码）
 2. `Component-Based`（组件化编码）
@@ -25,7 +25,7 @@ tags:
 4. 高效
 5. 单向数据流
 
-## React 高效的原因
+## 4. React 高效的原因
 
 1. 虚拟（`virture`） `DOM`，不总是直接操作 `DOM`
 2. `DOM diff` 算法，最小化页面重绘
