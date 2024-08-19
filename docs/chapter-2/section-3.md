@@ -176,3 +176,48 @@ ReactDOM.render(<Person {...p} />, document.getElementById("test1"));
   }
 </script>
 ```
+
+## 8. 函数式组件中使用 props
+
+函数没有实例，也没有 `this`，所有 **不能** 通过 `this.props` 访问传入的属性。  
+但是函数可以接收参数，可以通过参数访问传入的属性。
+
+::: warning 
+**注意**：函数组件只能使用组件三大属性中的 `props` 。
+:::
+
+```jsx{4-5,15}
+// 1.创建函数组件
+function Person(props) {
+  console.log(props);
+  // 可以通过参数访问传入的属性
+  const { name, sex, age } = props;
+  return (
+    <ul>
+      <li>姓名：{name}</li>
+      <li>性别：{sex}</li>
+      <li>年龄：{age}</li>
+    </ul>
+  );
+}
+
+// 函数组件对标签属性的限制只能写在组件外部
+Person.propTypes = {
+  name: PropTypes.string.isRequired,
+  sex: PropTypes.string,
+  age: PropTypes.number,
+  speak: PropTypes.func,
+};
+Person.defaultProps = {
+  sex: "不男不女",
+  age: 18,
+};
+
+// 2.渲染组件到页面
+ReactDOM.render(
+  <Person name="tom" sex="男" age={18} />,
+  document.getElementById("test"),
+);
+```
+
+<img class="zoomable" :src="$withBase('/images/screenshot/2/3/1.png')" alt="screenshot">
