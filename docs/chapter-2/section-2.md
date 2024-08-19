@@ -2,6 +2,9 @@
 title: 组件实例三大属性1：state
 comments: true
 tags:
+  - state
+  - this
+  - 箭头函数
 ---
 
 ## 1. 理解
@@ -139,7 +142,7 @@ ReactDOM.render(<Weather />, document.getElementById("test"));
 
 ## 4. 简写方式
 
-`ES2022` 为类的实例属性，又规定了一种新写法。实例属性（**包括方法**）现在除了可以定义在 `constructor()`方法里面的 `this` 上面，也可以通过赋值语句定义在类内部的最顶层，此时不需要写 `this`：
+ES2022 为类的实例属性规定了一种新写法。实例属性（**包括方法**）除了可以定义在 `constructor()`方法里面的 `this` 上面，也可以通过赋值语句定义在类内部的最顶层，此时不需要写 `this`：
 
 ```jsx{3-4,11-16}
 // 1. 创建组件
@@ -182,7 +185,7 @@ ReactDOM.render(<Weather />, document.getElementById("test"));
 
 解决类中一般方法中的 this 问题，有以下两种方式：
 
-1. 使用 `bind()` 方法绑定 this
+1. 使用 `bind()` 方法绑定 `this`
 
 ```js
 class Weather extends React.Component {

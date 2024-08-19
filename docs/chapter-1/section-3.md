@@ -8,24 +8,24 @@ tags:
 
 ## 1. 虚拟 DOM
 
-- 虚拟 `DOM` 对象最终都会被 `React` 转换为真实的 `DOM`。
+- 虚拟 DOM 对象最终都会被 React 转换为真实的 DOM。
 
-- 我们编码时基本只需要操作虚拟 `DOM` 的相关数据，`React` 会转换为真实 `DOM` 变化从而更新界面。
+- 我们编码时基本只需要操作虚拟 DOM 的相关数据，React 会转换为真实 DOM 变化从而更新界面。
 
-- 虚拟 `DOM` 比较“轻”，真实 `DOM` 比较“重”，因为虚拟 `DOM` 是 `React` 内部在用，无需真实 `DOM` 上那么多的属性。
+- **虚拟 DOM 比较“轻”，真实 DOM 比较“重”**，因为虚拟 DOM 是 `React` 内部在用，无需真实 DOM 上那么多的属性。
 
 <img class="zoomable" :src="$withBase('/images/screenshot/1/3/1.png')" alt="foo">
 
 ## 2. 创建虚拟 DOM 的两种方式
 
-1. 纯 `JS`（**一般不用**）:
+1. 纯 JS **（一般不用）**:
 
 ```js
 // 用法：React.createElement(type, props, ...children)
 var VDOM = React.createElement('h1',{id:'test'},'hello);
 ```
 
-2. `JSX`:
+2. JSX **<font color="red">（推荐）</font>**:
 
 ```jsx
 var VDOM = <h1 id="test">hello</h1>;
@@ -33,14 +33,14 @@ var VDOM = <h1 id="test">hello</h1>;
 
 ## 3. 渲染虚拟 DOM
 
-将虚拟 `DOM` 元素渲染到页面中的真实容器 `DOM` 中显示：
+将虚拟 DOM 元素渲染到页面中的真实容器 DOM 中显示：
 
 ```js
 ReactDOM.render(virtualDOM, containerDOM);
 ```
 
-- 参数 1：纯 `js` 或 `jsx` 创建的虚拟 `DOM` 对象。
-- 参数 2：用来包含虚拟 `DOM` 元素的真实 `DOM` 元素对象（一般是一个 `div`）。
+- 参数 1：纯 `js` 或 `jsx` 创建的 **虚拟DOM** 对象。
+- 参数 2：用来包含虚拟 DOM 元素的 **真实DOM** 元素对象（一般是一个 `div`）。
 
 ## 4. JSX
 
@@ -48,7 +48,7 @@ ReactDOM.render(virtualDOM, containerDOM);
 
 - 全称： `JavaScript XML`。
 - `React` 定义的一种类似于 `XML` 的 `JS` 扩展语法：`XML` + `JS`。
-- 作用：用来创建 `React` 虚拟 `DOM`（元素）对象。
+- 作用：**用来创建 React 虚拟 DOM（元素）对象。**
 
 ```jsx
 // JSX 创建虚拟DOM
@@ -70,7 +70,7 @@ var VDOM = (
 
 ::: tip
 
-1. **定义虚拟 `DOM` 时，不要加引号。**
+1. **定义虚拟 DOM 时，不要加引号。**
 2. **标签中混入 `JS` <font color="red"> 表达式 </font> 时要用 `{}` 。**
 3. 样式的 **类名不要用 `class`，要用 `className` 。**
 4. **内联样式，要用 `style = { { key: value } }` 的形式去写。**
@@ -106,7 +106,7 @@ const VDOM = (
 ReactDOM.render(VDOM, document.getElementById("test"));
 ```
 
-上述练习中，通过 `js` 表达式 `data.map()` 返回了一个数组（元素都是虚拟 `DOM`），**`React` 会自动对数组进行遍历**。
+上述练习中，通过 js 表达式 `data.map()` 返回了一个数组（元素都是虚拟 DOM），**`React` 会自动对数组进行遍历**。
 
 ### 4.4. 表达式与语句的区别
 

@@ -15,13 +15,13 @@ tags:
 ## 2. 介绍描述
 
 - 用于构建用户界面的 `JavaScript` 库（只关注于 `view` ）
-- 由 `Facebook` 开源
+- 由 Facebook 开源
 
 ## 3. React 的特点
 
-1. `Declarative`（声明式编码）
-2. `Component-Based`（组件化编码）
-3. `Learn Once, Write Anywhere`（支持客户端与服务器端渲染）
+1. Declarative（声明式编码）
+2. Component-Based（组件化编码）
+3. Learn Once, Write Anywhere（支持客户端与服务器端渲染）
 4. 高效
 5. 单向数据流
 

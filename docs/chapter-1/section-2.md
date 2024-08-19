@@ -8,9 +8,9 @@ tags:
 
 ## 1. 相关 js 库
 
-1. `react.js` : `React` 的核心库
-2. `react-dom.js` : 提供操作 `DOM` 的 `React` 扩展库
-3. `babel.min.js` : 解析 `JSX` 语法代码转为纯 `js` 语法代码的库
+1. react.js： `React` 的核心库
+2. react-dom.js： 提供操作 `DOM` 的 `React` 扩展库
+3. babel.min.js： 解析 `JSX` 语法代码转为纯 `js` 语法代码的库
 
 ## 2. 使用
 
@@ -54,8 +54,8 @@ tags:
 
 ::: warning 注意事项：
 
-1. `React` **核心库一定要在扩展库之前引用**。
+1. React **核心库一定要在扩展库之前引用**。
 2. 浏览器不能直接解析 `JSX` 代码，需要 `babel` 转译为纯 `JS` 的代码才能运行。**只要用了 `JSX`，都要加上 `type="text/babel"`**，声明需要 `babel` 来处理。
-3. **创建虚拟 `DOM` 时，一定不要加引号**，因为不是字符串。
+3. **创建虚拟 DOM 时，一定不要加引号**，因为不是字符串。
 
 :::

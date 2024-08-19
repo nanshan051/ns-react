@@ -2,16 +2,18 @@
 title: 基本理解和使用
 comments: true
 tags:
-  - 自定义组件
+  - 函数式组件
+  - 类式组件
+  - 类
 ---
 
 ## 1. 开发者调试工具
 
-在 `Chrome` 扩展程序中安装 `React` 开发者调试工具：`React Develpoer Tools`。
+在 Chrome 扩展程序中安装 React 开发者调试工具：`React Develpoer Tools`。
 
 <img class="zoomable" :src="$withBase('/images/screenshot/2/1/1.png')" alt="foo">
 
-固定到浏览器工具栏后，查看 `Ant Design` 官网（是用 `React` 编写的），可以看到工具生效了：
+固定到浏览器工具栏后，查看 `Ant Design` 官网（是用 React 编写的），可以看到工具生效了：
 
 <img class="zoomable" :src="$withBase('/images/screenshot/2/1/2.png')" alt="foo">
 
@@ -47,9 +49,9 @@ ReactDOM.render(<MyCOmponent />, document.getElementById("test"));
 
 ::: tip 回答：
 
-1. `React` 解析组件标签，找到了 `MyComponent` 组件。
+1. React 解析组件标签，找到了 `MyComponent` 组件。
 2. **发现组件是通过函数定义的，随后调用该函数**。
-3. 将返回的虚拟 `DOM` 转为真实 `DOM`，随后呈现在页面中。
+3. 将返回的虚拟 DOM 转为真实 DOM，随后呈现在页面中。
 
 :::
 
@@ -81,9 +83,9 @@ ReactDOM.render(<MyComponent />, document.getElementById("test"));
 
 ::: tip 回答：
 
-1. `React` 解析组件标签，找到了 `MyComponent` 组件。
+1. React 解析组件标签，找到了 `MyComponent` 组件。
 2. **发现组件是通过类定义的，随后 `new` 出来该类的实例，并通过该实例调用原型上的 `render()` 方法。**。
-3. 将原型上`render()`方法 返回的虚拟 `DOM` 转为真实 `DOM`，随后呈现在页面中。
+3. 将上一步返回的虚拟 DOM 转为真实 DOM，随后呈现在页面中。
 
 :::
 
@@ -145,7 +147,7 @@ student.study();
 ::: tip 总结：
 
 1. **类中的构造器不是必须写**，要对实例进行一些初始化的操作，如添加指定属性时，才写。
-2. 如果 `B` 类继承自 `A` 类，且 `B` 类中写了构造器，那么 **`B` 类构造器中的 `super` 是必须要调用的。**
+2. 如果 B 类继承自 A 类，且 B 类中写了构造器，那么 **B 类构造器中的 `super` 是必须要调用的。**
 3. 类中定义的方法，都是放在了**类的原型对象上**，供实例去使用。
 
 :::
