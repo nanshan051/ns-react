@@ -1,5 +1,5 @@
 ---
-title: 收集表单数据
+title: 组件的生命周期
 comments: true
 tags:
 ---

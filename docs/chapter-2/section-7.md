@@ -1,5 +1,5 @@
 ---
-title: 组件生命周期
+title: 虚拟DOM与DOM Diffing算法
 comments: true
 tags:
 ---

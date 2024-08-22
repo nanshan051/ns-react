@@ -64,20 +64,16 @@ const sidebar = [
         path: "/chapter-2/section-4",
       },
       {
-        title: "2.5. 组件的组合",
+        title: "2.5. 收集表单数据",
         path: "/chapter-2/section-5",
       },
       {
-        title: "2.6. 收集表单数据",
+        title: "2.6. 组件的生命周期",
         path: "/chapter-2/section-6",
       },
       {
-        title: "2.7. 组件生命周期",
+        title: "2.7. 虚拟DOM与DOM Diffing算法",
         path: "/chapter-2/section-7",
-      },
-      {
-        title: "2.8. 虚拟DOM与DOM Diff算法",
-        path: "/chapter-2/section-8",
       },
     ],
   },
