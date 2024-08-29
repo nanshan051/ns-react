@@ -8,6 +8,9 @@ tags:
 
 ## 1. 相关 js 库
 
+> **在线 CDN 加速服务**：[bootCDN](https://www.bootcdn.cn/)，可保存相关库到本地。  
+> **react 文档（旧）**：[https://zh-hans.legacy.reactjs.org/docs/cdn-links.html](https://zh-hans.legacy.reactjs.org/docs/cdn-links.html)  
+
 1. [react.js](https://unpkg.com/react@16.3.0/umd/react.development.js)： `React` 的核心库
 2. [react-dom.js](https://unpkg.com/react-dom@16.3.0/umd/react-dom.development.js)： 提供操作 `DOM` 的 `React` 扩展库
 3. [babel.min.js](https://unpkg.com/@babel/standalone@7.25.3/babel.min.js)： 解析 `JSX` 语法代码转为纯 `js` 语法代码的库

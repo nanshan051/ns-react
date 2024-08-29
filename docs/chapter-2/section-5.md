@@ -114,7 +114,7 @@ ReactDOM.render(<Login />, document.getElementById("test"));
 **通过函数调用继续返回函数的方式，实现多次接收参数最后统一处理** 的函数编码形式。
 :::
 
-```jsx{6-13,26,34}
+```jsx{6-13,26,32}
 class Login extends React.Component {
   state = {
     userName: "",
