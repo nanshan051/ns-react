@@ -48,7 +48,7 @@ ReactDOM.render(<Demo />, document.getElementById("test"));
 
 ::: warning 注意：
 
-- `字符串式` ：会将 ref 标签放在组件 **组件实例的 `refs` 属性** 中。
+- `字符串式` ：会将 ref 标签放在 **组件实例的 `refs` 属性** 中。
 - `回调函数` ：此例将 ref 标签放直接放在 **组件实例身上** 。
 
 :::

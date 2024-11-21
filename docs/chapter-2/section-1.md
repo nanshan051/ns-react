@@ -9,11 +9,11 @@ tags:
 
 ## 1. 开发者调试工具
 
-在 Chrome 扩展程序中安装 React 开发者调试工具：`React Develpoer Tools`。
+在 Chrome 扩展程序中安装 React 开发者调试工具：`React Developer Tools`。
 
 <img class="zoomable" :src="$withBase('/images/screenshot/2/1/1.png')" alt="foo">
 
-固定到浏览器工具栏后，查看 `Ant Design` 官网（是用 React 编写的），可以看到工具生效了：
+固定到浏览器工具栏后，查看 [Ant Design](https://ant-design.antgroup.com/docs/react/introduce-cn) 官网（是用 React 编写的），可以看到工具生效了：
 
 <img class="zoomable" :src="$withBase('/images/screenshot/2/1/2.png')" alt="foo">
 
@@ -23,12 +23,12 @@ tags:
 
 ```jsx{2,4}
 // 1.创建函数式组件
-function MyCOmponent() {
+function MyComponent() {
   console.log(this);
   return <h2>我是用函数定义的组件（适用于【简单组件】的定义）</h2>;
 }
 // 2.渲染组件到页面
-ReactDOM.render(<MyCOmponent />, document.getElementById("test"));
+ReactDOM.render(<MyComponent />, document.getElementById("test"));
 ```
 
 ::: warning 注意：
@@ -84,7 +84,7 @@ ReactDOM.render(<MyComponent />, document.getElementById("test"));
 ::: tip 回答：
 
 1. React 解析组件标签，找到了 `MyComponent` 组件。
-2. **发现组件是通过类定义的，随后 `new` 出来该类的实例，并通过该实例调用原型上的 `render()` 方法。**。
+2. **发现组件是通过类定义的，随后 `new` 出来该类的实例，并通过该实例调用原型上的 `render()` 方法。**
 3. 将上一步返回的虚拟 DOM 转为真实 DOM，随后呈现在页面中。
 
 :::

@@ -18,7 +18,7 @@ tags:
 
 ## 3. 基本使用
 
-```jsx{3-4,,16-17}
+```jsx{3-4,,15-16}
 class Person extends React.Component {
   render() {
     // 组件内通过实例对象的 props 获取外部传入的值
@@ -116,7 +116,7 @@ ReactDOM.render(<Person {...p} />, document.getElementById("test1"));
 
 ::: warning 注意：
 
-1. `PropTypes 库`和`组件的 propTypes 属性`，是两个不同的概念，**首字母大小写也不一样**。
+1. `PropTypes 库` 和 `组件的 propTypes 属性`，是两个不同的概念，**首字母大小写也不一样**。
 2. 如果需要 **指定某个属性类型为函数**，对应 PropTypes 库中的类型为 `func`。
    :::
 
@@ -154,7 +154,7 @@ ReactDOM.render(<Person {...p} />, document.getElementById("test1"));
 
 ## 7. 简写方式
 
-**静态属性** 指的是 `Class` 本身的属性，即`Class.propName`，而不是定义在实例对象（`this`）上的属性。  
+**静态属性** 指的是 `Class` 本身的属性，即 `Class.propName`，而不是定义在实例对象（`this`）上的属性。  
 直接在类内部最顶层的赋值语句前加上关键字 `static` ，属性（包括方法）就会添加到类本身上。
 
 ```html

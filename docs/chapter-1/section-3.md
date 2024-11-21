@@ -22,7 +22,7 @@ tags:
 
 ```js
 // 用法：React.createElement(type, props, ...children)
-var VDOM = React.createElement('h1',{id:'test'},'hello);
+var VDOM = React.createElement('h1',{id:'test'},'hello');
 ```
 
 2. JSX **<font color="red">（推荐）</font>**:

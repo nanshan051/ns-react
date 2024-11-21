@@ -41,7 +41,7 @@ ReactDOM.render(<Time />, document.getElementById("test"));
 
 ## 2. 虚拟 DOM 中 key 的作用
 
-- 简单的说：`key` 是 `虚拟 DOM 对象`的标识，在更新显示时 key 起着极其重要的作用。
+- 简单的说：`key` 是 `虚拟 DOM 对象` 的标识，在更新显示时 key 起着极其重要的作用。
 
 - 详细的说：当状态中的数据发生变化时，react 会根据【新数据】生成【新的虚拟 DOM】，随后 react 进行 【新虚拟 DOM】 与【旧虚拟 DOM】 的 `diff` 比较。
 
@@ -69,7 +69,7 @@ ReactDOM.render(<Time />, document.getElementById("test"));
    会产生没有必要的真实 DOM 更新 ==> 界面效果没问题，但 **<font color="red">效率低</font>**
 2. 如果结构中还包含 **输入类的 DOM** ：  
    会产生错误的 DOM 更新 ==> **<font color="red">界面有问题</font>**  
-   因为 **输入类的真实 DOM 有`value`属性，而虚拟 DOM 没有`value`属性**，`diff` 算法不会比较该值，会认为是相同节点，会复用之前的 DOM，所以之前输入的内容会保存。
+   因为 **输入类的真实 DOM 有 `value` 属性，而虚拟 DOM 没有 `value` 属性**，`diff` 算法不会比较该值，会认为是相同节点，会复用之前的 DOM，所以之前输入的内容会保存。
 3. 注意：**如果不存在对数据的逆序操作**：  
    仅用于渲染列表用于展示，使用 index 作为 key **是没有问题的**
 

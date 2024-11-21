@@ -225,6 +225,7 @@ class B extends React.Component {
   }
 
   render() {
+    console.log("B---render");
     return (
       <div>
         <span>

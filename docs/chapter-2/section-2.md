@@ -126,7 +126,7 @@ ReactDOM.render(<Weather />, document.getElementById("test"));
    - 原生事件绑定：`onclick`
    - `React` 事件绑定：`onClick`
 3. **事件回调函数调用时，是直接调用，不是通过实例调用，因此默认情况下 `this` 本来是 `window` ，但是由于类中的方法默认开启了严格模式，因此 `this` 是`undefined` 。**
-4. `bind()`方法会生成一个新函数，**并将新函数的 `this` 指向传入的第一个参数。**
+4. `bind()` 方法会生成一个新函数，**并将新函数的 `this` 指向传入的第一个参数。**
 5. 函数调用时，会采用**就近原则**。
 6. **`state` 不能直接修改，必须通过 `setState()` 来修改，否则不是响应式的。**
 7. 组件内函数调用次数：

@@ -77,6 +77,21 @@ const sidebar = [
       },
     ],
   },
+  {
+    title: "3. react应用（基于react脚手架）",
+    path: "/chapter-3/section-1",
+    collapsable: false,
+    children: [
+      {
+        title: "3.1. 使用create-react-app创建react应用",
+        path: "/chapter-3/section-1",
+      },
+      {
+        title: "3.2. demo：评论管理",
+        path: "/chapter-3/section-2",
+      },
+    ],
+  },
 ];
 
 module.exports = {
