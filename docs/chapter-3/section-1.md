@@ -87,14 +87,14 @@ yarn global bin # 查看执行文件路径
 
 ### 4.1. 完整目录
 
-安装 `tree-node-cli` 并生成树状目录：
+安装 `tree-node-cli` （ 或 `tree-cli` ）并生成树状目录：
 
 ```sh
 # 1. 安装 tree-node-cli
 npm i -g tree-node-cli
 
 # 2. 生成树状目录（-L 显示层级，-I 忽略的文件夹），
-# 注意这里的指令是treee，不是tree，这样设计的目的是与系统字段的目录指令tree相区分
+# 注意这里的指令是treee，不是tree，这样设计的目的是与系统自带的目录指令tree相区分
 treee -L 3 -I node_modules
 ```
 
@@ -106,17 +106,17 @@ react_staging
 ├── package.json                # 项目配置文件
 ├── public                      # 静态资源目录
 │   ├── favicon.ico             # 网站图标（小）
-│   ├── index.html              # 入口文件
+│   ├── index.html              # 主页面
 │   ├── logo192.png             # 网站图标（中）
 │   ├── logo512.png             # 网站图标（大）
 │   ├── manifest.json           # 应用缓存信息文件（应用加壳时的配置文件）
 │   └── robots.txt              # 搜索引擎爬虫配置文件
 ├── src                         # 业务相关代码目录
 │   ├── App.css                 # 全局样式文件
-│   ├── App.js                  # 应用入口文件
+│   ├── App.js                  # App组件（主组件）
 │   ├── App.test.js             # 测试文件
 │   ├── index.css               # 全局样式文件
-│   ├── index.js                # 应用入口文件
+│   ├── index.js                # 入口文件
 │   ├── logo.svg                # 应用图标
 │   ├── reportWebVitals.js      # 性能测试文件
 │   └── setupTests.js           # 测试文件
@@ -173,11 +173,14 @@ import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  // <React.StrictMode> 与 es5 里面的严格模式无关
+  // 是React为了检查<App>及其子组件的代码规范而设计的
   <React.StrictMode>
     <App />
   </React.StrictMode>,
 );
 
+// 用于记录页面性能
 reportWebVitals();
 ```
 
@@ -226,3 +229,194 @@ function App() {
 
 export default App;
 ```
+
+## 5. 简单案例
+
+### 5.1. 原始代码
+
+src 目录如下：
+
+```sh
+src
+├── App.jsx                  # 主组件
+├── components
+|  ├── Hello                 # Hello 组件
+|  |  ├── index.jsx
+|  |  └── index.css
+|  └── Welcome               # Welcome 组件
+|     ├── index.css
+|     └── index.jsx
+└── index.js                 # 入口文件
+```
+
+::: tip 组件命名
+
+1. react 中组件是用 js 写的，但为了与普通的 js 文件进行区分（不同类型的文件会有不同的图标），一般采用 `.jsx` 来作为组件名的后缀。
+2. react 中引用文件时，如果仅指定了文件夹，react 会默认查找该文件夹下的 `index.js` 或 `index.jsx`。
+
+**所以组件最好命名为 `index.jsx`，不仅可以在引用时少写一级目录，还可以和普通 js 文件区分开。**
+
+:::
+
+#### 5.1.1. 入口文件 index.js
+
+```js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+```
+
+#### 5.1.2. 主组件 App.jsx
+
+```jsx
+import React, { Component } from "react";
+import Hello from "./components/Hello";
+import Welcome from "./components/Welcome";
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Hello />
+        <Welcome />
+      </div>
+    );
+  }
+}
+```
+
+#### 5.1.3. Hello 组件
+
+Hello/index.css :
+
+```css
+.title {
+  color: lightcoral;
+}
+```
+
+Hello/index.jsx :
+
+```jsx
+import React, { Component } from "react";
+import "./index.css";
+
+export default class Hello extends Component {
+  render() {
+    return <h2 className="title">hello, react</h2>;
+  }
+}
+```
+
+#### 5.1.4. Welcome 组件
+
+Welcome/index.css :
+
+```css
+.title {
+  color: skyblue;
+}
+```
+
+Welcome/index.jsx :
+
+```jsx
+import React, { Component } from "react";
+import "./index.css";
+
+export default class Welcome extends Component {
+  render() {
+    return <h2 className="title">welcome</h2>;
+  }
+}
+```
+
+### 5.2. 原始效果（样式冲突）
+
+<img class="zoomable" :src="$withBase('/images/screenshot/3/1/9.png')" alt="foo">
+
+从上图中可以看出，由于 App 组件中引入了两个子组件 Hello 和 Welcome，两个子组件中都含有 `title` 类选择器的样式，而 `Welcome` 组件是后引入的，所以 `Welcome/index.css` 中的样式 **覆盖** 了 `Hello/index.css` 中的样式，最终导致 Hello 组件中的文字颜色也为天蓝色。
+
+### 5.3. CSS Modules
+
+使用 `CSS Modules` （CSS 模块化），可以防止不同组件之间的样式冲突。
+
+::: tip CSS Modules 用法
+
+1. 组件样式文件名以 `.module.css` 结尾。
+2. 引入组件样式文件时，需用变量接收，例如 `xxxStyle`。
+3. 在标签中使用 `className` 属性引用样式，值为样式文件中的选择器类名，例如 `xxxStyle.yyy`。
+
+:::
+
+对 Hello 和 Welcome 组件进行 `CSS Modules` 后的 src 目录如下：
+
+```sh
+src
+├── App.jsx
+├── components
+|  ├── Hello
+|  |  ├── index.jsx
+|  |  └── index.module.css  # CSS模块化
+|  └── Welcome
+|     ├── index.module.css  # CSS模块化
+|     └── index.jsx
+└── index.js
+```
+
+#### 5.3.1. Hello 组件 CSS Modules
+
+Hello/index.module.css :
+
+```css
+.title {
+  color: lightcoral;
+}
+```
+
+Hello/index.jsx :
+
+```jsx {2,6}
+import React, { Component } from "react";
+import HelloStyle from "./index.module.css";
+
+export default class Hello extends Component {
+  render() {
+    return <h2 className={HelloStyle.title}>hello, react</h2>;
+  }
+}
+```
+
+#### 5.3.2. Welcome 组件 CSS Modules
+
+Welcome/index.module.css :
+
+```css
+.title {
+  color: skyblue;
+}
+```
+
+Welcome/index.jsx :
+
+```jsx {2,6}
+import React, { Component } from "react";
+import WelcomeStyle from "./index.module.css";
+
+export default class Welcome extends Component {
+  render() {
+    return <h2 className={WelcomeStyle.title}>welcome</h2>;
+  }
+}
+```
+
+### 5.4. CSS Modules 效果
+
+<img class="zoomable" :src="$withBase('/images/screenshot/3/1/10.png')" alt="foo">
+
+从上图中可以看出，`CSS Modules` 为 Welcome 组件和 Hello 组件中的 `title` 类名 **重新生成了新的类名**，形式为 `[组件名]_[原有类名]__[哈希值]` 。
+
+> 同一组件内，同一选择器生成的新类名是相同的，包括哈希值。

@@ -87,7 +87,7 @@ const sidebar = [
         path: "/chapter-3/section-1",
       },
       {
-        title: "3.2. demo：评论管理",
+        title: "3.2. 组件的组合使用-TodoList",
         path: "/chapter-3/section-2",
       },
     ],
