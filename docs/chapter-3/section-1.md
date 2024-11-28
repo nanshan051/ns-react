@@ -113,7 +113,7 @@ react_staging
 │   └── robots.txt              # 搜索引擎爬虫配置文件
 ├── src                         # 业务相关代码目录
 │   ├── App.css                 # 全局样式文件
-│   ├── App.js                  # App组件（主组件）
+│   ├── App.js                  # 根组件
 │   ├── App.test.js             # 测试文件
 │   ├── index.css               # 全局样式文件
 │   ├── index.js                # 入口文件
@@ -127,7 +127,7 @@ react_staging
 
 ### 4.2. index.html
 
-入口文件 `index.html` 如下：
+主页面 `index.html` 如下：
 
 ```html
 <!DOCTYPE html>
@@ -157,7 +157,7 @@ react_staging
 
 ### 4.3. index.js
 
-应用入口文件 `index.js` 如下：
+入口文件 `index.js` 如下：
 
 ::: warning
 从 React 18 开始，`ReactDOM.render` 方法 **已被废弃** 。  
@@ -200,7 +200,7 @@ ReactDOM.render(
 
 ### 4.4. App.js
 
-应用入口文件 `App.js` 如下：
+根组件 `App.js` 如下：
 
 ```js
 import logo from "./logo.svg";
@@ -238,7 +238,7 @@ src 目录如下：
 
 ```sh
 src
-├── App.jsx                  # 主组件
+├── App.jsx                  # 根组件
 ├── components
 |  ├── Hello                 # Hello 组件
 |  |  ├── index.jsx
@@ -269,7 +269,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
 ```
 
-#### 5.1.2. 主组件 App.jsx
+#### 5.1.2. 根组件 App.jsx
 
 ```jsx
 import React, { Component } from "react";
@@ -334,7 +334,11 @@ export default class Welcome extends Component {
 }
 ```
 
-### 5.2. 原始效果（样式冲突）
+### 5.2. 原始效果（样式污染）
+
+::: danger 样式污染
+直接引入 CSS 文件的一个显著问题就是：**<font color="red">全局生效，样式污染。</font>** 无法进行样式隔离，会对组件之外的内容产生不可预知的影响。
+:::
 
 <img class="zoomable" :src="$withBase('/images/screenshot/3/1/9.png')" alt="foo">
 
