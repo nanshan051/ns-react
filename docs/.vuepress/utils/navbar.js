@@ -92,6 +92,17 @@ const sidebar = [
       },
     ],
   },
+  {
+    title: "4. react ajax",
+    path: "/chapter-4/section-1",
+    collapsable: false,
+    children: [
+      {
+        title: "4.1. 跨域与代理",
+        path: "/chapter-4/section-1",
+      },
+    ],
+  },
 ];
 
 module.exports = {
