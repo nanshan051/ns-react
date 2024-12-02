@@ -101,6 +101,10 @@ const sidebar = [
         title: "4.1. 跨域与代理",
         path: "/chapter-4/section-1",
       },
+      {
+        title: "4.2. demo：查询GitHub用户",
+        path: "/chapter-4/section-2",
+      },
     ],
   },
 ];
