@@ -8,7 +8,7 @@ tags:
 
 ## 1. 前言
 
-在上一小节《demo：查询 GitHub 用户》中， 组件 `<Search>` 和 `<List>` 是兄弟关系，它们之间的通信是通过 `props` 进行的。原理如下：
+在上一小节《案例：查询 GitHub 用户》中， 组件 `<Search>` 和 `<List>` 是兄弟关系，它们之间的通信是通过 `props` 进行的。原理如下：
 
 <img class="zoomable" :src="$withBase('/images/screenshot/4/3/1.png')" alt="foo">
 
@@ -16,7 +16,7 @@ tags:
 
 ## 2. 订阅-发布
 
-『 订阅-发布』机制 **可以让任意两个组件直接进行通信，无需通过父组件传递。**
+**『 订阅-发布』机制可以让任意两个组件直接进行通信，无需通过父组件传递。**
 
 常用的订阅-发布库有：`PubSubJS` 、`EventEmitter`。这里介绍一下 `PubSubJS` 的用法：
 
@@ -55,7 +55,7 @@ PubSub.publish("myTopic", { name: "张三" });
 
 ## 3. 实现
 
-在上一小节《demo：查询 GitHub 用户》的基础上，采用『订阅-发布』机制实现兄弟组件通信。
+在上一小节《案例：查询 GitHub 用户》的基础上，采用『订阅-发布』机制实现兄弟组件通信。
 
 ### 3.1. 修改 App 组件
 

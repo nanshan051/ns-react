@@ -14,6 +14,10 @@ const nav = [
         text: "掘金",
         link: "https://juejin.cn",
       },
+      {
+        text: "思否",
+        link: "https://segmentfault.com",
+      },
     ],
   },
 ];
@@ -102,12 +106,16 @@ const sidebar = [
         path: "/chapter-4/section-1",
       },
       {
-        title: "4.2. demo：查询GitHub用户",
+        title: "4.2. 案例：查询GitHub用户",
         path: "/chapter-4/section-2",
       },
       {
         title: "4.3. 消息订阅-发布机制",
         path: "/chapter-4/section-3",
+      },
+      {
+        title: "4.4. fetch",
+        path: "/chapter-4/section-4",
       },
     ],
   },
