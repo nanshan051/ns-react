@@ -40,7 +40,7 @@ react_staging
 
 ### 2.1. 公共样式
 
-在 public/css 目录下添加 `bootstrap.css` 文件，并在主页面 index.html 中引入：
+在 public/css 目录下添加 `bootstrap.css` 文件（Bootstrap v3.3.5），并在主页面 index.html 中引入：
 
 ```html
 <link rel="stylesheet" href="./css/bootstrap.css" />
@@ -155,7 +155,7 @@ export default class Search extends Component {
 }
 ```
 
-### 2.5. Search 组件
+### 2.5. List 组件
 
 List/index.jsx：
 

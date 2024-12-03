@@ -105,6 +105,10 @@ const sidebar = [
         title: "4.2. demo：查询GitHub用户",
         path: "/chapter-4/section-2",
       },
+      {
+        title: "4.3. 消息订阅-发布机制",
+        path: "/chapter-4/section-3",
+      },
     ],
   },
 ];

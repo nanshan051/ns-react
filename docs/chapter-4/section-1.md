@@ -20,8 +20,27 @@ tags:
    - `promise` 风格
    - 可以用在浏览器端和 `node` 服务器端
 3. `fetch` : 原生函数，但老版本浏览器不支持。
-   - 不再使用 XMLHttpRequest 对象提交 ajax 请求
+   - **不再使用 XMLHttpRequest 对象提交 ajax 请求**
    - 为了兼容低版本的浏览器，可以引入兼容库 `fetch.js`
+   - `promise` 风格
+
+::: tip 注意
+
+- `jQuery` 和 `axios` 都是对 `XMLHttpRequest` 对象的封装。
+
+- 而 `fetch` 是浏览器内置的 API ，与`XMLHttpRequest`同级。
+
+- 文档：
+
+  - [jQuery](https://www.jquery123.com/)
+  - [axios](https://github.com/axios/axios)
+  - [fetch](https://github.com/github/fetch) ( [博客](https://segmentfault.com/a/1190000003810652))
+
+- 教程：
+  - [www.w3ccoo.com](https://www.w3ccoo.com/)
+  - [www.w3school.com.cn](https://www.w3school.com.cn/)
+
+:::
 
 ## 3. 服务器代码
 
