@@ -82,7 +82,7 @@ const sidebar = [
     ],
   },
   {
-    title: "3. react应用（基于react脚手架）",
+    title: "3. react 应用（基于react脚手架）",
     path: "/chapter-3/section-1",
     collapsable: false,
     children: [
@@ -116,6 +116,29 @@ const sidebar = [
       {
         title: "4.4. fetch",
         path: "/chapter-4/section-4",
+      },
+    ],
+  },
+  {
+    title: "5. React 路由",
+    path: "/chapter-5/section-1",
+    collapsable: false,
+    children: [
+      {
+        title: "5.1. 相关理解",
+        path: "/chapter-5/section-1",
+      },
+      {
+        title: "5.2. 路由的基本使用",
+        path: "/chapter-5/section-2",
+      },
+      {
+        title: "5.3. NavLink 组件",
+        path: "/chapter-5/section-3",
+      },
+      {
+        title: "5.4. Switch 组件",
+        path: "/chapter-5/section-4",
       },
     ],
   },
