@@ -140,6 +140,10 @@ const sidebar = [
         title: "5.4. Switch 组件",
         path: "/chapter-5/section-4",
       },
+      {
+        title: "5.5. 解决样式丢失问题",
+        path: "/chapter-5/section-5",
+      },
     ],
   },
 ];
