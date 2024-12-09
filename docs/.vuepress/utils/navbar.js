@@ -148,6 +148,10 @@ const sidebar = [
         title: "5.6. 路由的模糊匹配和精确匹配",
         path: "/chapter-5/section-6",
       },
+      {
+        title: "5.7. Redirect 组件",
+        path: "/chapter-5/section-7",
+      },
     ],
   },
 ];
