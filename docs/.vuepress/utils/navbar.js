@@ -152,6 +152,10 @@ const sidebar = [
         title: "5.7. Redirect 组件",
         path: "/chapter-5/section-7",
       },
+      {
+        title: "5.8. 嵌套路由",
+        path: "/chapter-5/section-8",
+      },
     ],
   },
 ];
