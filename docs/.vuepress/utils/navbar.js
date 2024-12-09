@@ -144,6 +144,10 @@ const sidebar = [
         title: "5.5. 解决样式丢失问题",
         path: "/chapter-5/section-5",
       },
+      {
+        title: "5.6. 路由的模糊匹配和精确匹配",
+        path: "/chapter-5/section-6",
+      },
     ],
   },
 ];

@@ -127,6 +127,12 @@ root.render(
 
 1. 点击路由链接 About 时，路由器会修改路径，但浏览器 **不会发送请求。**
 
-2. 刷新页面，由于 **『哈希路由』** 的特点是：**<font color="red">`#` 及其后面的内容不会作为浏览器的请求内容</font>**，所以虽然地址栏的网址是`http://localhost:3000/#/page/about`，但是实际上请求的是 `http://localhost:3000/` ，也就是访问项目的根目录 `/public` ，默认返回 `index.html` 文件。
+2. 刷新页面，虽然地址栏的网址是`http://localhost:3000/#/page/about`，但是实际上请求的是 `http://localhost:3000/` ，也就是访问项目的根目录 `/public` ，默认返回 `index.html` 文件。
+
+   ::: danger
+
+   **『哈希路由』** 的特点：**<font color="red">`#` 及其后面的内容不会作为浏览器的请求内容。</font>**
+
+   :::
 
 3. 后续原理同本小节 2.1
