@@ -169,8 +169,12 @@ const sidebar = [
         path: "/chapter-5/section-11",
       },
       {
-        title: "5.12. push 和 replace",
+        title: "5.12. push 与 replace",
         path: "/chapter-5/section-12",
+      },
+      {
+        title: "5.13. 编程式路由导航",
+        path: "/chapter-5/section-13",
       },
     ],
   },

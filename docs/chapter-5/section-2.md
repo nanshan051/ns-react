@@ -199,11 +199,11 @@ export default class Home extends Component {
 
 ```js
 "history": {
-    "push": push() {},
-    "replace": replace() {},
-    "go": go() {},
+    "push": push(path, state) {},
+    "replace": replace(path, state) {},
     "goBack": goBack() {},
     "goForward": goForward() {},
+    "go": go(n) {},
 },
 "location": {
     "pathname": "/about",
