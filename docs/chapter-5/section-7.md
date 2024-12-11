@@ -6,9 +6,13 @@ tags:
   - 路由重定向
 ---
 
+## 1. 简介
+
 `<Redirect>` 也是 `react-router-dom` 的核心组件，用于路由重定向。用法：`<Redirect to="/xxx"/>` 。
 
 一般写在所有路由的最下方，当所有路由都无法匹配时，跳转到 `<Redirect>` 组件指定的路由。
+
+## 2. 案例
 
 App.jsx：
 

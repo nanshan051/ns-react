@@ -212,7 +212,7 @@ export default class Message extends Component {
 
 ## 3. 总结
 
-::: tip 注意：
+::: tip 嵌套路由：
 
 1. 注册子路由时 **要写上父路由的 path 值。**
 2. 路由的匹配是 **按照注册路由顺序进行的。**

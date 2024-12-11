@@ -156,6 +156,18 @@ const sidebar = [
         title: "5.8. 嵌套路由",
         path: "/chapter-5/section-8",
       },
+      {
+        title: "5.9. 向路由组件传递params参数",
+        path: "/chapter-5/section-9",
+      },
+      {
+        title: "5.10. 向路由组件传递search参数",
+        path: "/chapter-5/section-10",
+      },
+      {
+        title: "5.11. 向路由组件传递state参数",
+        path: "/chapter-5/section-11",
+      },
     ],
   },
 ];

@@ -25,7 +25,7 @@ tags:
 
 1. 路由工作流程：  
    （1）**点击路由链接 `<Link>` 会根据 `to` 值修改浏览器地址中的 `path`。**  
-   （2）react-router-dom 监听 path 变化，**根据 `path` 渲染对应的路由组件 `<Route>`。**
+   （2）路由器监听 path 变化，**根据 `path` 渲染对应的路由组件 `<Route>`。**
 2. Link、Route、BrowserRouter、HashRouter 都是 **`react-router-dom` 自带的核心组件**，采用 **分别暴露** 的方式对外暴露。
 
 :::
@@ -197,22 +197,24 @@ export default class Home extends Component {
    - 路由组件：接收到以下固定属性（仅展示常用的）：
    <p></p>
 
-```json
+```js
 "history": {
-    "push": "push() {}",
-    "replace": "replace() {}",
-    "go": "go() {}",
-    "goBack": "goBack() {}",
-    "goForward": "goForward() {}",
+    "push": push() {},
+    "replace": replace() {},
+    "go": go() {},
+    "goBack": goBack() {},
+    "goForward": goForward() {},
 },
 "location": {
     "pathname": "/about",
-    "search": "",
+    "search": "",  // 路由传参 search
+    "state": undefined  // 路由传参 state
 },
 "match": {
     "path": "/about",
     "url": "/about",
-    "params": "{}"
+    "isExact": true, // 当前路由组件是否是精确匹配到的
+    "params": {}  // 路由传参 params
 }
 ```
 
