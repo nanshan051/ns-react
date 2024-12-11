@@ -176,6 +176,10 @@ const sidebar = [
         title: "5.13. 编程式路由导航",
         path: "/chapter-5/section-13",
       },
+      {
+        title: "5.14. withRouter() 方法",
+        path: "/chapter-5/section-14",
+      },
     ],
   },
 ];
