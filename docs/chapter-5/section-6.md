@@ -23,7 +23,7 @@ App.jsx：
 
 ## 2. 精确匹配
 
-通过对路由组件设置`exact` 或 `exact={true}`，可以让该路由组件只匹配到精确的路径。所以 `/home` 不能匹配到 `/home/a/b`。
+通过对路由组件 `<Route>` 设置 `exact` 或 `exact={true}`，可以让该路由组件只匹配到精确的路径。所以 `/home` 不能匹配到 `/home/a/b`。
 
 App.jsx：
 

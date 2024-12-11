@@ -168,6 +168,10 @@ const sidebar = [
         title: "5.11. 向路由组件传递state参数",
         path: "/chapter-5/section-11",
       },
+      {
+        title: "5.12. push 和 replace",
+        path: "/chapter-5/section-12",
+      },
     ],
   },
 ];
