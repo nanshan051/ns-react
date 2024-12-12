@@ -180,6 +180,10 @@ const sidebar = [
         title: "5.14. withRouter() 方法",
         path: "/chapter-5/section-14",
       },
+      {
+        title: "5.15. BrowserRouter 与 HashRouter",
+        path: "/chapter-5/section-15",
+      },
     ],
   },
 ];
