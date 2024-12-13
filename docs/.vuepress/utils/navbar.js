@@ -201,6 +201,17 @@ const sidebar = [
       },
     ],
   },
+  {
+    title: "7. redux",
+    path: "/chapter-7/section-1",
+    collapsable: false,
+    children: [
+      {
+        title: "7.1. redux 理解",
+        path: "/chapter-7/section-1",
+      },
+    ],
+  },
 ];
 
 module.exports = {
