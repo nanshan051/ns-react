@@ -41,7 +41,7 @@ const sidebar = [
         path: "/chapter-1/section-3",
       },
       {
-        title: "1.4. 模块与组件和模块化与组件化的理解",
+        title: "1.4. 模块与组件和模块化与组件化",
         path: "/chapter-1/section-4",
       },
     ],
@@ -64,7 +64,7 @@ const sidebar = [
         path: "/chapter-2/section-3",
       },
       {
-        title: "2.4. 组件实例三大属性3：refs与事件处理",
+        title: "2.4. 组件实例三大属性3：refs(事件处理)",
         path: "/chapter-2/section-4",
       },
       {
@@ -183,6 +183,21 @@ const sidebar = [
       {
         title: "5.15. BrowserRouter 与 HashRouter",
         path: "/chapter-5/section-15",
+      },
+    ],
+  },
+  {
+    title: "6. react-ui",
+    path: "/chapter-6/section-1",
+    collapsable: false,
+    children: [
+      {
+        title: "6.1. ant-design 的使用",
+        path: "/chapter-6/section-1",
+      },
+      {
+        title: "6.2. 自定义主题",
+        path: "/chapter-6/section-2",
       },
     ],
   },
