@@ -210,6 +210,10 @@ const sidebar = [
         title: "7.1. redux 理解",
         path: "/chapter-7/section-1",
       },
+      {
+        title: "7.2. redux 的三个核心概念",
+        path: "/chapter-7/section-2",
+      },
     ],
   },
 ];
