@@ -2,7 +2,7 @@
 title: 计算器：纯react版
 comments: true
 tags:
-  -
+  - 案例
 ---
 
 为了更好的理解 redux，新创建一个项目 `redux_test` （参考 3.1 小节），实现一个计算器。

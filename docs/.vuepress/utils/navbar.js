@@ -218,6 +218,10 @@ const sidebar = [
         title: "7.3. 计算器：纯react版",
         path: "/chapter-7/section-3",
       },
+      {
+        title: "7.4. 计算器：redux精简版",
+        path: "/chapter-7/section-4",
+      },
     ],
   },
 ];

@@ -2,7 +2,7 @@
 title: 组件的组合使用-TodoList
 comments: true
 tags:
-  -
+  - 案例
 ---
 
 ## 1. 组件化编码流程

@@ -2,7 +2,7 @@
 title: demo：查询GitHub用户
 comments: true
 tags:
-  -
+  - 案例
 ---
 
 ## 1. 需求
