@@ -222,6 +222,10 @@ const sidebar = [
         title: "7.4. 计算器：redux精简版",
         path: "/chapter-7/section-4",
       },
+      {
+        title: "7.5. 计算器：redux完整版",
+        path: "/chapter-7/section-5",
+      },
     ],
   },
 ];
