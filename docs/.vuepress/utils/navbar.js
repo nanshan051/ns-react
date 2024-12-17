@@ -214,6 +214,10 @@ const sidebar = [
         title: "7.2. redux 的三个核心概念",
         path: "/chapter-7/section-2",
       },
+      {
+        title: "7.3. 计算器：纯react版",
+        path: "/chapter-7/section-3",
+      },
     ],
   },
 ];
