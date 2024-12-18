@@ -5,9 +5,11 @@ tags:
   - 案例
 ---
 
-在上一小节《计算器：redux 精简版》中我们自己拼接了动作对象，在本节中我们使用 `action` 生成动作对象。
+在上一小节《计算器：redux 精简版》中我们自己拼接了动作对象，在本小节中我们使用 `action creator` 创建动作对象。
 
 ## 1. src 目录
+
+在 src\redux 目录下，新建 `constant.js` 和 `count_action.js` 文件。
 
 ```sh
 src
@@ -18,7 +20,7 @@ src
 ├── index.js
 └── redux
    ├── constant.js       # 定义常量
-   ├── count_action.js   # action（封装动作对象）
+   ├── count_action.js   # action creator（动作创建者：创建动作对象）
    ├── count_reducer.js
    └── store.js
 ```
@@ -40,13 +42,13 @@ export const INCREMENT = "increment";
 export const DECREMENT = "decrement";
 ```
 
-### 2.2. action
+### 2.2. action creator
 
 redux/count_action.js：
 
 ::: tip
 
-该文件专门为 Count 组件生成动作对象（ `action` ）。
+**暴露的每个函数都是一个 `action creator` （动作创建者），返回值是一个 `action` （动作对象）。**
 
 - **箭头函数体内若直接返回一个对象，则可以简写为用小括号 `()` 包裹该对象：`() => ({...})` 。**
 
@@ -55,6 +57,7 @@ redux/count_action.js：
 ```js
 import { INCREMENT, DECREMENT } from "./constant";
 
+// 函数是action creator（动作创建者），返回值是action（动作对象）。
 export const createIncrementAction = (data) => ({ type: INCREMENT, data });
 export const createDecrementAction = (data) => ({ type: DECREMENT, data });
 ```
@@ -88,7 +91,7 @@ export default function countReducer(preState = initState, action) {
 
 components/Count/index.jsx：
 
-通过 `action` 生成动作对象，并派发给 `reducer`。(代码仅展示变化部分)
+通过 `action creator` 创建 `action` 对象，然后派发给 `reducer`。(代码仅展示变化部分)
 
 ```jsx
 import React, { Component } from "react";

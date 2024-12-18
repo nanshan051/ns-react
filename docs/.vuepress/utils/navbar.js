@@ -226,6 +226,10 @@ const sidebar = [
         title: "7.5. 计算器：redux完整版",
         path: "/chapter-7/section-5",
       },
+      {
+        title: "7.6. 计算器：redux异步action版",
+        path: "/chapter-7/section-6",
+      },
     ],
   },
 ];

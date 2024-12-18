@@ -7,9 +7,16 @@ tags:
 
 在上一小节《计算器：纯 react 版》的基础上，本小节采用 `redux` 进行状态管理，实现计算器。
 
-本小节没有用到 `action` ，所以是精简版，仅展示修改、新增的代码，后续同理。
+本小节没有用到 `action creator` （动作创建者） ，所以是精简版，仅展示修改、新增的代码，后续同理。
+
+```sh
+# 安装 redux
+yarn add redux@4.0.5
+```
 
 ## 1. src 目录
+
+在 src 目录下新建 `redux` 文件夹，并在该文件下创建 `store.js` 和 `count_reducer.js` 。
 
 ```sh
 src
@@ -31,7 +38,9 @@ redux/store.js：
 
 ::: tip
 
-该文件专门用于暴露一个 store 对象，**整个应用只有一个 store 对象。**
+该文件用于暴露一个 store 对象，**整个应用只有一个 store 对象。**
+
+- 采用 `createStore` 创建一个 store 时，要传入一个为其服务的 reducer。
 
 :::
 
@@ -51,12 +60,11 @@ redux/count_reducer.js：
 ::: tip
 
 1. 该文件是用于创建一个为 Count 组件服务的 reducer，reducer 的本质就是一个函数。
+2. `reducer` 函数会接到两个参数，分别为：**之前的状态 ( `preState` )，动作对象 ( `action` )。** 返回加工后的状态。
 
-2. `reducer` 函数会接到两个参数，分别为：**之前的状态 ( `preState` )，动作对象 ( `action` )。**
-
-3. 初始化时：
-   - `preState` 若不设默认值，则值为 `undefind`。
-   - `action` 默认值是 `{type: "@@redux/INIT1.8.c.b.2"}`，其中 1.8.c.b.2 部分在每次初始化时的值都不同，这么做是为了与 switch 中各个 case 值区分，这样就能在初始化时执行 `default` 。
+3. reducer 第一次被调用（即 **『初始化』**）时，是 `store` 自动触发的：
+   - preState 若不设默认值，则值为 `undefind`。
+   - action 默认值是 `{type: "@@redux/INIT1.8.c.b.2"}`，其中 1.8.c.b.2 部分在每次初始化时的值都不同，这么做是为了与 switch 中各个 case 值区分，这样就能在初始化时执行 `default` 。
 
 :::
 
@@ -85,9 +93,9 @@ components/Count/index.jsx：
 
 1. **`redxu` 只负责状态管理，不关心页面重新渲染。** 所以要想实现『状态响应式』，**需要手动监听 redux 中状态的变化，重新渲染 Count 组件。**
 
-2. 由于 **react 中直接调用 this.render() 不会触发组件的重新渲染**，可以采用 `this.setState({})` 触发重新渲染，不管给 setState( ) 传什么值，只要 setState( ) 调用了，就一定会触发重新渲染。
+2. 由于 **react 中直接调用 this.render() 不会触发组件的重新渲染**，可以采用 `this.setState({})` 来实现，不管给 setState( ) 传什么对象，只要 setState( ) 调用了，就一定会触发重新渲染。
 
-3. `action` 的作用是将动作类型和数据封装成一个对象，我们可以自己拼接动作对象，所以 action 不是必须的。
+3. `action creator` 的作用是将动作类型、数据封装成对象，其实我们可以自己拼接动作对象，所以 **action creator 不是必须的。**
 
 4. 可以通过 `store.getState()` 获取到 redux 中的状态。
 
