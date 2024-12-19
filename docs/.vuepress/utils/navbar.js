@@ -230,6 +230,14 @@ const sidebar = [
         title: "7.6. 计算器：redux异步action版",
         path: "/chapter-7/section-6",
       },
+      {
+        title: "7.7. 计算器：react-redux的基本使用",
+        path: "/chapter-7/section-7",
+      },
+      {
+        title: "7.8. 计算器：react-redux优化",
+        path: "/chapter-7/section-8",
+      },
     ],
   },
 ];
