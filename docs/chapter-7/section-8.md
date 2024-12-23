@@ -3,6 +3,7 @@ title: 计算器：react-redux优化
 comments: true
 tags:
   - 案例
+  - Provider
 ---
 
 在上一小节《计算器：react-redux 的使用》的基础上，本小节进行一些优化，只展示变更的代码。
@@ -202,25 +203,25 @@ import { connect } from "react-redux";
 // 定义UI组件
 class Count extends Component {
   // 加法
-  increament = () => {
+  increment = () => {
     const { value } = this.selectNumber;
     // 调用容器组件传递过来的操作状态的方法
     this.props.jia(value * 1);
   };
   // 减法
-  decreament = () => {
+  decrement = () => {
     const { value } = this.selectNumber;
     this.props.jian(value * 1);
   };
   // 奇数再加
-  increamentIfOdd = () => {
+  incrementIfOdd = () => {
     if (this.props.count % 2 !== 0) {
       const { value } = this.selectNumber;
       this.props.jia(value * 1);
     }
   };
   // 异步加
-  increamentAsync = () => {
+  incrementAsync = () => {
     const { value } = this.selectNumber;
     this.props.jiaAsync(value * 1, 500);
   };
@@ -237,11 +238,11 @@ class Count extends Component {
           <option value="3">3</option>
         </select>
         &nbsp;&nbsp;
-        <button onClick={this.increament}>+</button>&nbsp;&nbsp;
-        <button onClick={this.decreament}>-</button>&nbsp;&nbsp;
-        <button onClick={this.increamentIfOdd}>当前求和为奇数再加</button>
+        <button onClick={this.increment}>+</button>&nbsp;&nbsp;
+        <button onClick={this.decrement}>-</button>&nbsp;&nbsp;
+        <button onClick={this.incrementIfOdd}>当前求和为奇数再加</button>
         &nbsp;&nbsp;
-        <button onClick={this.increamentAsync}>异步加</button>&nbsp;&nbsp;
+        <button onClick={this.incrementAsync}>异步加</button>&nbsp;&nbsp;
       </div>
     );
   }

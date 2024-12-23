@@ -3,6 +3,7 @@ title: 计算器：redux完整版
 comments: true
 tags:
   - 案例
+  - action creator
 ---
 
 在上一小节《计算器：redux 精简版》中我们自己拼接了动作对象，在本小节中我们使用 `action creator` 创建动作对象。
@@ -103,17 +104,17 @@ import {
 
 export default class Count extends Component {
   // 加法
-  increament = () => {
+  increment = () => {
     const { value } = this.selectNumber;
     store.dispatch(createIncrementAction(value * 1));
   };
   // 减法
-  decreament = () => {
+  decrement = () => {
     const { value } = this.selectNumber;
     store.dispatch(createDecrementAction(value * 1));
   };
   // 奇数再加
-  increamentIfOdd = () => {
+  incrementIfOdd = () => {
     const count = store.getState();
     if (count % 2 !== 0) {
       const { value } = this.selectNumber;
@@ -121,7 +122,7 @@ export default class Count extends Component {
     }
   };
   // 异步加
-  increamentAsync = () => {
+  incrementAsync = () => {
     const { value } = this.selectNumber;
     setTimeout(() => {
       store.dispatch(createIncrementAction(value * 1));

@@ -3,6 +3,7 @@ title: 计算器：redux精简版
 comments: true
 tags:
   - 案例
+  - redux
 ---
 
 在上一小节《计算器：纯 react 版》的基础上，本小节采用 `redux` 进行状态管理，实现计算器。
@@ -120,17 +121,17 @@ export default class Count extends Component {
   */
 
   // 加法
-  increament = () => {
+  increment = () => {
     const { value } = this.selectNumber;
     store.dispatch({ type: "increment", data: value * 1 });
   };
   // 减法
-  decreament = () => {
+  decrement = () => {
     const { value } = this.selectNumber;
     store.dispatch({ type: "decrement", data: value * 1 });
   };
   // 奇数再加
-  increamentIfOdd = () => {
+  incrementIfOdd = () => {
     const count = store.getState();
     if (count % 2 !== 0) {
       const { value } = this.selectNumber;
@@ -138,7 +139,7 @@ export default class Count extends Component {
     }
   };
   // 异步加
-  increamentAsync = () => {
+  incrementAsync = () => {
     const { value } = this.selectNumber;
     setTimeout(() => {
       store.dispatch({ type: "increment", data: value * 1 });
@@ -157,11 +158,11 @@ export default class Count extends Component {
           <option value="3">3</option>
         </select>
         &nbsp;&nbsp;
-        <button onClick={this.increament}>+</button>&nbsp;&nbsp;
-        <button onClick={this.decreament}>-</button>&nbsp;&nbsp;
-        <button onClick={this.increamentIfOdd}>当前求和为奇数再加</button>
+        <button onClick={this.increment}>+</button>&nbsp;&nbsp;
+        <button onClick={this.decrement}>-</button>&nbsp;&nbsp;
+        <button onClick={this.incrementIfOdd}>当前求和为奇数再加</button>
         &nbsp;&nbsp;
-        <button onClick={this.increamentAsync}>异步加</button>&nbsp;&nbsp;
+        <button onClick={this.incrementAsync}>异步加</button>&nbsp;&nbsp;
       </div>
     );
   }

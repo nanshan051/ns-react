@@ -88,19 +88,19 @@ import React, { Component } from "react";
 export default class Count extends Component {
   state = { count: 0 };
   // 加法
-  increament = () => {
+  increment = () => {
     const { count } = this.state;
     const { value } = this.selectNumber;
     this.setState({ count: count + value * 1 });
   };
   // 减法
-  decreament = () => {
+  decrement = () => {
     const { count } = this.state;
     const { value } = this.selectNumber;
     this.setState({ count: count - value * 1 });
   };
   // 奇数再加
-  increamentIfOdd = () => {
+  incrementIfOdd = () => {
     const { count } = this.state;
     if (count % 2 !== 0) {
       const { value } = this.selectNumber;
@@ -108,7 +108,7 @@ export default class Count extends Component {
     }
   };
   // 异步加
-  increamentAsync = () => {
+  incrementAsync = () => {
     const { count } = this.state;
     const { value } = this.selectNumber;
     setTimeout(() => {
@@ -126,11 +126,11 @@ export default class Count extends Component {
           <option value="3">3</option>
         </select>
         &nbsp;&nbsp;
-        <button onClick={this.increament}>+</button>&nbsp;&nbsp;
-        <button onClick={this.decreament}>-</button>&nbsp;&nbsp;
-        <button onClick={this.increamentIfOdd}>当前求和为奇数再加</button>
+        <button onClick={this.increment}>+</button>&nbsp;&nbsp;
+        <button onClick={this.decrement}>-</button>&nbsp;&nbsp;
+        <button onClick={this.incrementIfOdd}>当前求和为奇数再加</button>
         &nbsp;&nbsp;
-        <button onClick={this.increamentAsync}>异步加</button>&nbsp;&nbsp;
+        <button onClick={this.incrementAsync}>异步加</button>&nbsp;&nbsp;
       </div>
     );
   }

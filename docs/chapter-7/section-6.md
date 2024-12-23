@@ -3,6 +3,9 @@ title: 计算器：redux异步action版
 comments: true
 tags:
   - 案例
+  - 异步action
+  - redux-thunk
+  - applyMiddleware
 ---
 
 在上一小节《计算器：redux 完整版》中，我们通过 action creator 创建了 『 同步 action 』。在本小节中，我们补充一下 **『 异步 action 』** 的使用。
@@ -57,7 +60,7 @@ import {
 } from "../../redux/count_action";
 
 // 异步加
-increamentAsync = () => {
+incrementAsync = () => {
   const { value } = this.selectNumber;
   /* setTimeout(() => {
       store.dispatch(createIncrementAction(value * 1));

@@ -238,6 +238,22 @@ const sidebar = [
         title: "7.8. 计算器：react-redux优化",
         path: "/chapter-7/section-8",
       },
+      {
+        title: "7.9. 计算器+人员列表：数据共享",
+        path: "/chapter-7/section-9",
+      },
+      {
+        title: "7.10. 计算器+人员列表：开发者工具",
+        path: "/chapter-7/section-10",
+      },
+      {
+        title: "7.11. 计算器+人员列表：最终版",
+        path: "/chapter-7/section-11",
+      },
+      {
+        title: "7.12. 打包部署项目",
+        path: "/chapter-7/section-12",
+      },
     ],
   },
 ];

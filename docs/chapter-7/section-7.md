@@ -3,6 +3,8 @@ title: 计算器：react-redux的基本使用
 comments: true
 tags:
   - 案例
+  - react-redux
+  - connect
 ---
 
 在上小节《计算器：redux 异步 action 版》的基础上，本节将增加 `react-redux` 的使用，只展示变更的代码。
@@ -191,25 +193,25 @@ import React, { Component } from "react";
 
 export default class Count extends Component {
   // 加法
-  increament = () => {
+  increment = () => {
     const { value } = this.selectNumber;
     // 调用容器组件通过props传递过来的操作状态的方法
     this.props.jia(value * 1);
   };
   // 减法
-  decreament = () => {
+  decrement = () => {
     const { value } = this.selectNumber;
     this.props.jian(value * 1);
   };
   // 奇数再加
-  increamentIfOdd = () => {
+  incrementIfOdd = () => {
     if (this.props.count % 2 !== 0) {
       const { value } = this.selectNumber;
       this.props.jia(value * 1);
     }
   };
   // 异步加
-  increamentAsync = () => {
+  incrementAsync = () => {
     const { value } = this.selectNumber;
     this.props.jiaAsync(value * 1, 500);
   };
