@@ -265,6 +265,10 @@ const sidebar = [
         title: "8.1. setState",
         path: "/chapter-8/section-1",
       },
+      {
+        title: "8.2. lazyLoad",
+        path: "/chapter-8/section-2",
+      },
     ],
   },
 ];
