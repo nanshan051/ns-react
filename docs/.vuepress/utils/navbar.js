@@ -256,6 +256,17 @@ const sidebar = [
       },
     ],
   },
+  {
+    title: "8. react 扩展",
+    path: "/chapter-8/section-1",
+    collapsable: false,
+    children: [
+      {
+        title: "8.1. setState",
+        path: "/chapter-8/section-1",
+      },
+    ],
+  },
 ];
 
 module.exports = {
