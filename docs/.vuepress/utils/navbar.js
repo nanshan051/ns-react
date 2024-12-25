@@ -269,6 +269,10 @@ const sidebar = [
         title: "8.2. lazyLoad",
         path: "/chapter-8/section-2",
       },
+      {
+        title: "8.3. Hooks",
+        path: "/chapter-8/section-3",
+      },
     ],
   },
 ];
