@@ -273,6 +273,10 @@ const sidebar = [
         title: "8.3. Hooks",
         path: "/chapter-8/section-3",
       },
+      {
+        title: "8.4. Fragment",
+        path: "/chapter-8/section-4",
+      },
     ],
   },
 ];
