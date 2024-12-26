@@ -285,6 +285,10 @@ const sidebar = [
         title: "8.6. 组件优化",
         path: "/chapter-8/section-6",
       },
+      {
+        title: "8.7. render Props",
+        path: "/chapter-8/section-7",
+      },
     ],
   },
 ];
