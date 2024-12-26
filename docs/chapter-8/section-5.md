@@ -3,6 +3,10 @@ title: Context
 comments: true
 tags:
   - Context
+  - createContext
+  - contextType
+  - Provider
+  - ConSumer
 ---
 
 ## 1. Context

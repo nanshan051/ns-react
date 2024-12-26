@@ -281,6 +281,10 @@ const sidebar = [
         title: "8.5. Context",
         path: "/chapter-8/section-5",
       },
+      {
+        title: "8.6. 组件优化",
+        path: "/chapter-8/section-6",
+      },
     ],
   },
 ];
