@@ -293,6 +293,10 @@ const sidebar = [
         title: "8.8. 错误边界",
         path: "/chapter-8/section-8",
       },
+      {
+        title: "8.9. 组件通信方式总结",
+        path: "/chapter-8/section-9",
+      },
     ],
   },
 ];
