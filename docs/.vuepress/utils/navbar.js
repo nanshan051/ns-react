@@ -289,6 +289,10 @@ const sidebar = [
         title: "8.7. render Props",
         path: "/chapter-8/section-7",
       },
+      {
+        title: "8.8. 错误边界",
+        path: "/chapter-8/section-8",
+      },
     ],
   },
 ];
