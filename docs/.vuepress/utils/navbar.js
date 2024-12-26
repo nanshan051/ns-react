@@ -277,6 +277,10 @@ const sidebar = [
         title: "8.4. Fragment",
         path: "/chapter-8/section-4",
       },
+      {
+        title: "8.5. Context",
+        path: "/chapter-8/section-5",
+      },
     ],
   },
 ];
