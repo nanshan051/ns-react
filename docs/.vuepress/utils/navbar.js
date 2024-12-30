@@ -82,7 +82,7 @@ const sidebar = [
     ],
   },
   {
-    title: "3. react 应用（基于react脚手架）",
+    title: "3. React 应用（基于脚手架）",
     path: "/chapter-3/section-1",
     collapsable: false,
     children: [
@@ -97,7 +97,7 @@ const sidebar = [
     ],
   },
   {
-    title: "4. react ajax",
+    title: "4. React Ajax",
     path: "/chapter-4/section-1",
     collapsable: false,
     children: [
@@ -120,7 +120,7 @@ const sidebar = [
     ],
   },
   {
-    title: "5. React 路由",
+    title: "5. React Router 5",
     path: "/chapter-5/section-1",
     collapsable: false,
     children: [
@@ -187,7 +187,7 @@ const sidebar = [
     ],
   },
   {
-    title: "6. react-ui",
+    title: "6. React UI",
     path: "/chapter-6/section-1",
     collapsable: false,
     children: [
@@ -202,7 +202,7 @@ const sidebar = [
     ],
   },
   {
-    title: "7. redux",
+    title: "7. Redux",
     path: "/chapter-7/section-1",
     collapsable: false,
     children: [
@@ -257,7 +257,7 @@ const sidebar = [
     ],
   },
   {
-    title: "8. react 扩展",
+    title: "8. React 扩展",
     path: "/chapter-8/section-1",
     collapsable: false,
     children: [
@@ -296,6 +296,25 @@ const sidebar = [
       {
         title: "8.9. 组件通信方式总结",
         path: "/chapter-8/section-9",
+      },
+    ],
+  },
+  {
+    title: "9. React Router 6",
+    path: "/chapter-9/section-1",
+    collapsable: false,
+    children: [
+      {
+        title: "9.1. React Router 6 概述",
+        path: "/chapter-9/section-1",
+      },
+      {
+        title: "9.2. Component",
+        path: "/chapter-9/section-2",
+      },
+      {
+        title: "9.3. Hooks",
+        path: "/chapter-9/section-3",
       },
     ],
   },
