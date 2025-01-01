@@ -3,14 +3,14 @@ title: 组件优化
 comments: true
 tags:
   - 优化
-  - setState({})
+  - setState
   - shouldComponentUpdate
   - PureComponent
 ---
 
 React 的 `Component` 存在两大问题：（1）`setState({})` 触发重新渲染；（2）子组件自动重新渲染。
 
-## 1. setState({})触发重新渲染
+## 1. `setState({})` 触发重新渲染
 
 只要执行了 `setState()` 方法，即使不改变状态数据，组件也会重新` render()` ，这就导致『效率低』。
 
