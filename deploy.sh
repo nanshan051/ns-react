@@ -15,6 +15,6 @@ git commit -m 'deploy'
 
 # 发布到
 # git push -f git@github.com:mqyqingfeng/learn-typescript.git master:gh-pages
-git push -f https://github.com/nanshan051/ns-react.git master:gh-pages
+git push -f https://github.com/nanshan051/ns-blog.git master:gh-pages
 
 cd -
