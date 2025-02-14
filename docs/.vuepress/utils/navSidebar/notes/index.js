@@ -48,6 +48,18 @@ const notesSidebar = [
       },
     ],
   },
+  {
+    title: "3. 优化",
+    path: "/notes/chapter-3/section-1",
+    collapsable: false,
+    children: [
+      {
+        title: "3.1. 首页白屏时间优化",
+        path: "/notes/chapter-3/section-1",
+        collapsable: false,
+      },
+    ],
+  },
 ];
 
 module.exports = notesSidebar;
