@@ -4,6 +4,7 @@ comments: true
 tags:
   - props
   - 扩展运算符
+  - 静态属性 static
 ---
 
 ## 1. 理解

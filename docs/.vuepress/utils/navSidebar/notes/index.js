@@ -1,6 +1,6 @@
 const notesSidebar = [
   {
-    title: "杂记",
+    title: "随想录",
     path: "/notes/",
     collapsable: false,
   },

@@ -9,7 +9,7 @@ author: NS
 date: 2021-05-20
 
 # 首页2：自定义布局
-# 下面这行代码会访问 /.vuepress/components/layouts/Layout-Default.vue
+# 下面这行代码会访问 /.vuepress/components/Layout/Default.vue
 # 并将当前文件内容插入到自定义布局的插槽<Content/>中
 # 若想使用首页1，则将下面这行代码注释掉即可
 

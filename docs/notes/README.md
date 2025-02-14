@@ -1,7 +1,6 @@
 ---
-title: 杂记
+title: 随想录
 tags:
-  - 杂记
   - notes
 ---
 

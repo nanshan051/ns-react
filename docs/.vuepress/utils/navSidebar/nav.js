@@ -8,7 +8,11 @@ const nav = [
     link: "/react/",
   },
   {
-    text: "杂记",
+    text: "TS",
+    link: "/ts/",
+  },
+  {
+    text: "随想录",
     link: "/notes/",
   },
   {
