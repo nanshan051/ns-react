@@ -60,6 +60,34 @@ const notesSidebar = [
       },
     ],
   },
+  {
+    title: "4. HTML",
+    path: "/notes/chapter-4/section-1",
+    collapsable: false,
+    children: [],
+  },
+  {
+    title: "5. CSS",
+    path: "/notes/chapter-5/section-1",
+    collapsable: false,
+    children: [
+      {
+        title: "5.1. vertical-align 原理及相关问题",
+        path: "/notes/chapter-5/section-1",
+        collapsable: false,
+      },
+      {
+        title: "5.2. 图片填充文字+颜色渐变文字",
+        path: "/notes/chapter-5/section-2",
+        collapsable: false,
+      },
+      {
+        title: "5.3. 背景图片透明+文字不透明",
+        path: "/notes/chapter-5/section-3",
+        collapsable: false,
+      },
+    ],
+  },
 ];
 
 module.exports = notesSidebar;
